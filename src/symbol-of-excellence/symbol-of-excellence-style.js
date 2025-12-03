@@ -9,7 +9,11 @@ export const SymbolOfExcellenceStyle = styled.div`
   }
   .element__two {
     display: flex;
+    gap: 40px;
     max-width: 1280px;
+    @media (max-width: 920px) {
+      flex-direction: column;
+    }
   }
   .title {
     text-align: center;
@@ -27,12 +31,15 @@ export const SymbolOfExcellenceStyle = styled.div`
   .sub__title {
     color: rgb(243, 176, 79);
     // border-left: 4px solid rgb(243, 176, 79);
+    border-left: 4px solid rgb(243, 176, 79);
     padding-left: 0.5rem;
   }
   .details {
+    align-items: left;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.8;
+    /* border: 10px solid red; */
     color: rgb(86, 102, 131);
   }
 `;
