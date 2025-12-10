@@ -73,11 +73,17 @@ const Testimonials = (props) => {
   let reviews = props.reviews;
   const [index, setIndex] = useState(0);
 
-  function leftShiftHandler() {}
+  function leftShiftHandler() {
+    setIndex(index === 0 ? reviews.length - 1 : index - 1);
+  }
 
-  function rightShiftHandler() {}
+  function rightShiftHandler() {
+    setIndex((index + 1) % reviews.length);
+  }
 
-  function surpriseHandler() {}
+  function surpriseHandler() {
+    setIndex(Math.floor(Math.random() * reviews.length));
+  }
 
   return (
     <Container>
